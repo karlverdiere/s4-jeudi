@@ -13,6 +13,12 @@
 #  patien = Patient.create!(last_name: "prenom#{index}",first_name:  "nom#{index}")
 #end
 
-10.times do |index|
-  appoitment = Appoitment.create!(id: "#{index}", date: "10.09.199#{index}", doctor_id: "#{index}", patient_id: "#{index}")
-end
+#10.times do |index|
+  #appoitment = Appoitment.create!(id: "#{index}",  doctor_id: "#{index}", patient_id: "#{index}")
+#end
+date: Faker::Time.between(DateTime.now + 1, DateTime.now + 8)
+#je n'utilise pas le faker car mon ordi n'aime pas sa mais sinon pour rajouter les dates voici quoi rajouter dedans
+#ps avant de faire en rails db:seed mettre date en commentaire
+#le code appoitment est a executer sur rails console
+#taper appoitment.create(doctor_id: , patient_id: )
+#ensuite pour voir Patient.find().appoitment
